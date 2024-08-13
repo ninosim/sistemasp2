@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>O que o JavaScript Pode Fazer?</h1>
+
+    <h2>JavaScript alterar os valores de atributos HTML.</h2>
+
+    <p>Nesse caso o JavaScript altera o valor do atributo src (source) de uma imagem.</p>
+
+    <!-- <button> define o botão, onclick define o evento, document.getElementById define o alvo,
+    src define o atributo que será alterado-->
+    <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Ligar a luz</button>
+
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+    <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Desligar a luz</button>
+
+    <h2>Ele também pode fazer operações e exibir resultados</h2>
+    <p>O texto abaixo é a soma de 5 + 6:</p>
+    <p id="soma"></p>
+
+    <!-- <script> abre o bloco de código JavaScript,
+    document.getElementById define o alvo (o <p> acima),
+    innerHTML é a propriedade que define um conteúdo HTML -->
+    <script>
+    document.getElementById("soma").innerHTML = 5 + 6;
+    </script>
+
+    <p>Um conteúdo também pode ser exibido por um aviso de sistema (clique no botão para um exemplo).</p>
+    <button onclick="window.alert('AVISO!')">Aviso</button>
+
+    <h2>Comandos JavaScript</h2>
+
+    <p>Um <b>programa JavaScript</b> é uma lista de <b>comandos</b> a serem executados por um computador.</p>
+
+    <p id="comando"></p>
+
+    <script>
+        let x, y, z;  // Comando 1, declara as variáveis
+        x = 5;        // Comando 2, define o valor de x
+        y = 6;        // Comando 3, define o valor de y
+        z = x + y;    // Comando 4, define o valor de z (que será uma operação)
+
+    document.getElementById("comando").innerHTML =
+    "O valor de z é " + z + ".";  
+    </script>
+
+    <p>Comandos JavaScript são compostos de:</p>
+    <ul>
+        <li>Valores</li>
+        <li>Operadores</li>
+        <li>Expressões</li>
+        <li>Palavras-Chave</li>
+        <li>Comentários</li>
+    </ul>
+
+    <h2>Valores</h2>
+    A sintaxe JavaScript define dois tipos de valores:
+    <ul>
+        <li>Literais</li>
+        <li>Variáveis</li>
+    </ul>
+
+    <h3>Literais</h3>
+    <p>Números podem ser escritos com ponto decimal ou sem:</p>
+
+    <p id="numero"></p>
+
+    <script>
+        document.getElementById("numero").innerHTML = 10.50;
+    </script>
+
+    <p>Strings podem ser escritas com aspas simples ou duplas:</p>
+
+    <p id="string"></p>
+
+    <script>
+        document.getElementById("string").innerHTML = 'String de Texto';
+    </script>
+
+    <h3>Variáveis</h3>
+    <p>São usadas para <b>armazenar</b> valores.</p>
+    <p>JavaScript usa as palavras-chave <b>var, let</b> e <b>const</b> para declarar variáveis.</p>
+    <p>O sinal de <b>igual (=)</b> é usado para definir o valor de uma variável.</p>
+    <p>Nesse exemplo, a é declarada como variável. Então a recebe o valor de 6:</p>
+
+    <p id="variável"></p>
+
+    <script>
+        let a; //Declara a variável x
+        a = 6; //Define o valor dela como 6
+        document.getElementById("variável").innerHTML = a;
+    </script>
+
+    <h2>Operadores</h2>
+    <p>JavaScript usa operadores aritméticos <b>( + - * / )</b> para computar valores. Nesse exemplo ela calculará a equação (5 + 6) * 10:</p>
+
+    <p id="calc"></p>
+
+    <script>
+        document.getElementById("calc").innerHTML = (5 + 6) * 10;
+    </script>
+
+    <h2>Tipagem Fraca & Dinâmica</h2>
+    <p>JavaScript tem tipagem fraca e dinâmica.</p>
+    <p id="tipagem"></p>
+
+    <script>
+        document.getElementById("tipagem").innerHTML = "0" + 1;
+    </script>
+</body>
+</html>
